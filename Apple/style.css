@@ -1,0 +1,1164 @@
+/* ==== FONT FACES ==== */
+/* SF Pro Display Fonts */
+@font-face {
+	font-family: SFpro_display_regular;
+	src: url(font/SF_Pro/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+	font-family: SFpro_display_bold;
+	src: url(font/SF_Pro/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+	font-family: SFpro_display_light;
+	src: url(font/SF_Pro/SF-Pro-Display-Light.otf);
+}
+@font-face {
+	font-family: SFpro_display_ultralight;
+	src: url(font/SF_Pro/SF-Pro-Display-Ultralight.otf);
+}
+@font-face {
+	font-family: SFpro_display_medium;
+	src: url(font/SF_Pro/SF-Pro-Display-Medium.otf);
+}
+/* SF Pro Text Fonts */
+@font-face {
+	font-family: SFpro_text_regular;
+	src: url(font/SF_Pro/SF-Pro-Text-Regular.otf);
+}
+@font-face {
+	font-family: SFpro_text_bold;
+	src: url(font/SF_Pro/SF-Pro-Text-Bold.otf);
+}
+@font-face {
+	font-family: SFpro_text_light;
+	src: url(font/SF_Pro/SF-Pro-Text-Light.otf);
+}
+@font-face {
+	font-family: SFpro_text_semi;
+	src: url(font/SF_Pro/SF-Pro-Text-Semibold.otf);
+}
+/* SF Compact Display/Text Fonts */
+@font-face {
+	font-family: SFcom_display_regular;
+	src: url(font/SF_Compact/SFCompactDisplay-Regular.otf);
+}
+@font-face {
+	font-family: SFcom_display_bold;
+	src: url(font/SF_Compact/SFCompactText-Medium.otf);
+}
+/* Other Fonts */
+@font-face {
+	font-family: geopia;
+	src: url(font/geopia/geopla.ttf);
+}
+@font-face {
+	font-family: TradeGothicCondensed;
+	src: url(font/gothic/TradeGothic_condensedBold.otf);
+}
+
+/* ==== MAIN CSS ==== */
+/* General CSS */
+*, body {
+	margin: 0;
+	padding: 0;
+	font-family: SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.bg-grey { 
+	background-color: #F1F1F1;
+}
+.bg-greygradient {
+	background: url(img/tv/tv_bg.png), linear-gradient(#4C657B, black);
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+/* CSS Positioning */
+.right {
+	float: right;
+	text-align: right;
+}
+.left {
+	float: left;
+	text-align: left;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* hr (horizontal line) properties */
+#empty_space {
+	color: rgba(255,255,255,0);
+	height: 50px;
+}
+.thickWhiteLine {
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	border: none;
+}
+.thickWhiteLine_product {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border: none;
+}
+.dark_line {
+	background-color: #666666 !important;
+	border-color: #666666 !important;
+}
+
+/* Other general modifiers */
+.hidden {
+	display: none;
+}
+.superscript {
+	vertical-align: super;
+	font-size: 15px;
+}
+.slim, .ultraThin {
+	font-weight: 100;
+} /* Thin text use only */
+.hideOnDesktop {
+	display: none;
+} /* Appear only on Mobile Screens (Less than 800px) */
+.hideOnMobile {
+	display: block;
+} /* Appear on devices greater than 800px resolution */
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+.white_font {
+	color: white !important;
+}
+.NEW_label {
+	color: #f46c0e !important;
+	font-size: 9px;
+}
+.footnote {
+	color: #666666 !important;
+}
+/*==== NAVIGATION ====*/
+/* Main Menu */
+nav {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	width: 100vw;
+	height: 24px;
+	text-align: center;
+	margin: 0;
+	padding: 10px 0px;
+	position: fixed;
+	display: block;
+}
+#nav_mac { /* Modify Navbar for Mac pages only */
+	background-color: black;
+	position: relative;
+}
+#nav_tv { /* Modify Navbar for Apple TV pages only */
+	background-color: rgba(0,16,24,1.00);
+	position: relative;
+}
+nav a:link, nav a:visited, nav a:focus, nav a:active {
+	display: inline-block;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #B8B8B8;
+}
+nav a:hover img {
+	-webkit-filter: brightness(75%);
+	-moz-filter: brightness(75%);
+	filter: brightness(75%);
+}
+.nav_item {
+	padding-left: 37px;
+	padding-right: 37px;
+}
+
+/*Mobile Menu*/
+#mobile-menu {
+	display: none;
+	position: absolute;
+	margin-top: 5px;
+	height: 100vh;
+	width: 100%;
+	background-color: black !important;
+	z-index: 0;
+	padding: 25px;
+}
+#mobile_menu_icon {
+	height: 24px;
+	padding-bottom: 4px;
+}
+#mobile-menu a, #mobile-menu a:visited {
+	display: block;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 16px;
+	color: white;
+	float: left;
+	text-align: left;
+	padding: 12px 0;
+	width: 80%;
+	text-decoration: none;
+	border-bottom: thin solid #515151;
+}
+#mobile-menu a:hover {
+	color: #B8b8b8;
+	text-align: left;
+	text-decoration: none;
+}
+nav:hover #mobile_menu_icon:hover ~ #mobile-menu, #mobile-menu:hover {
+	display: block;
+}
+#mobile-search {
+	border-bottom: 1.5px solid #C0C0C0 !important;
+}
+
+.logo-sm {
+	width: 20px;
+	vertical-align: text-bottom;
+}
+.logo-s {
+	width: 15px;
+	filter: brightness(75%);
+	margin: 0 10px;
+	-webkit-filter: brightness(75%);
+	vertical-align: text-bottom;
+}
+.logo-m {
+	width: 55px;
+	filter: brightness(75%);
+	margin: 15px;
+	-webkit-filter: brightness(75%);
+	vertical-align: text-bottom;
+}
+
+/* Product Page Sub Navigation */
+.subnav {
+	color: white;
+	width: 100%;
+	height: 90px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px 0px;
+	display: block;
+}
+#tvsubmenu {
+	background-color: rgba(51,51,51,0.80);
+}
+#macsubmenu {
+	background-color: #141414;
+}
+.subnav > .flex-grid {
+	width: 75%;
+	margin: 5px auto;
+}
+.subnav > .flex-grid > .col {
+	font-size: 11px;
+	text-align: center;
+	margin: 5px auto;
+	color: #686868;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.subnav > .flex-grid > .col:hover > a:hover figcaption {
+	color: #66BBFF;
+}
+#tvsubmenu > .flex-grid {
+	width: 40%;
+}
+.subnav a figure img {
+	text-align: center;
+	width: auto;
+	max-width: 80px;
+	height: auto;
+	max-height: 40px;
+	text-decoration: none !important;
+}
+.subnav > .flex-grid > .col > a figcaption, .subnav > .flex-grid > .col > a:visited figcaption, .subnav > .flex-grid > .col > a:focus, .subnav > .flex-grid > .col > a:active {
+	width: 100%;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	margin-top: 5px;
+	font-family: SFpro_display_regular, SFpro_text_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	text-decoration: none !important;
+}
+
+/* Site Labels and Font Modifiers */
+.HomeProductLabel {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 55px;
+	color: black;
+}
+.ItemProductLabel_dark {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 75px;
+	color: white;
+}
+.ItemProductLabel_light {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black;
+	font-size: 75px;
+}
+
+.HomeProductCaption {
+	font-family: SFpro_display_light, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: 200;
+	font-size: 27px;
+	color: black;
+}
+.ItemProductCaption_dark {
+	font-family: SFpro_display_regular, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 40px;
+	color: white;
+}
+.ItemProductCaption_dark_large {
+	font-family: SFpro_display_medium, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 45px;
+	color: white;
+}
+.ItemProductCaption_light {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black;
+	font-size: 35px;
+}
+
+.ItemProductDescription {
+	font-family: SFpro_text_light, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black;
+	margin: 35px;
+	font-size: 25px;
+}
+.ItemProductDescription_dark {
+	font-family: SFpro_text_light, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: white;
+	margin: 35px;
+	font-size: 25px;
+	line-height: 37px;
+}
+
+.ItemProductLinks {
+	font-family: SFpro_display_regular, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #67BBFF;
+	font-size: 20px;
+	margin-top: 15px;
+}
+.ItemProductLinks a:link, .ItemProductLinks a:visited {
+	color: #67BBFF;
+	text-decoration: none;
+}
+.ItemProductLinks a:hover {
+	color: #67BBFF;
+	text-decoration: underline;
+}
+
+/* ==== Page Specific CSS ==== */
+/* Construction webpage */
+.ConstructionLabel {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 35px;
+}
+.ConstructionCaption {
+	font-family: SFpro_display_light, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: 200;
+	font-size: 20px;
+}
+#construction {
+	margin: 0 auto;
+	height: 650px;
+}
+#construction > .flex-grid {
+	width: 650px;
+	margin: 0 auto;
+	padding: 0;
+}
+#construction > .flex-grid > .col {
+	width: 100%;
+	font-size: 11px;
+	text-align: center;
+	color: black;
+	margin: 0;
+	padding: 130px 0;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* Home Page*/
+.productImageHome {
+	margin: 0 auto;
+	display: block;
+}
+#iPhoneXhome { /* iPhone X - Home Page */
+	background-color: #FAFAFA;
+	height: 400px;
+	margin: 0;
+	width: 100%;
+	padding: 170px 0;
+	text-align: center;
+}
+
+#iPhone8RedHome {
+	color: white;
+	background-color: #B00E23;
+	text-align: center;
+	height: 584px;
+	margin: 0;
+	width: 100%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+.specialTag {
+	font-family: SFpro_display_light, SFpro_text_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	padding: 7px 20px;
+	font-size: 18px;
+	border: thin white solid;
+	border-radius: 4px;
+}
+.productRedBrackets {
+	vertical-align: sub;
+	font-size: 75px !important;
+	font-family: geopia, SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.productRedLogo {
+	font-weight: 300;
+	font-family: TradeGothicCondensed, SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.productRedRED {
+	vertical-align: super;
+	font-size: 40px;
+	font-weight: 200;
+}
+#iPhone8RedHome a, #iPhone8RedHome a:visited {
+	font-size: 22px;
+	color: white;
+	text-decoration: none;
+}
+#iPhone8RedHome a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.trademark {
+	font-size: 19px;
+	vertical-align: text-top;
+	font-family: SFpro_display_light, SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+#iPadhome {
+	background-color: #F5F5F5;
+	height: 430px;
+	margin: 0;
+	width: 100%;
+	padding: 130px 0;
+	text-align: center;
+}
+#iPadhome .productImageHome {
+	width: 1068px;
+	height: 396px;
+}
+
+#macbookpro_home {
+	background-color: #FAFAFA;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+#macbookpro_home .productImageHome {
+	width: 516px;
+	height: auto;
+}
+
+#applewatch_home {
+	background-color: #EEEEEE;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#airpods_home {
+	background-color: #FAFAFA;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#wwdc_home {
+	background-color: #FAFAFA;
+	background: url(img/wwdc.jpg);
+	background-size: auto 580px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#appletv_home {
+	background-color: #FAFAFA;
+	color: white !important;
+	background: url(img/tv_home.jpg);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#music_home {
+	background-color: #FAFAFA;
+	color: white !important;
+	background: url(img/music_home.jpg);
+	background-size: auto 570px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 50px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* Mac Page */
+#mac_iMacPro {
+	background-color: #1A1A1A;
+	color: white;
+	height: 880px;
+	margin: 0;
+	width: 100%;
+	padding: 75px 0;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+}
+#mac_iMacPro img {
+	margin: 0 auto;
+	width: 769px;
+}
+
+#mac_iMac {
+	color: white;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: auto;
+	margin: 0;
+	width: 100%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+#mac_iMac img {
+	margin-top: 35px;
+}
+
+#mac_macbookpro {
+	color: white;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: 585px;
+	margin: 0;
+	width: 100%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+#mac_macbookpro img {
+	margin-top: 35px;
+	width: 1050px;
+}
+
+#mac_macbook {
+	color: white;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: 585px;
+	margin: 0;
+	width: 100%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+#mac_macbook img {
+	margin-top: 35px;
+	width: 950px;
+}
+
+#mac_macOS {
+	color: white;
+	background-color: #FAFAFA;
+	background: url(img/mac/highsierra.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	height: 230px;
+	margin: 0;
+	width: 100%;
+	padding: 125px 0;
+	overflow: hidden;
+}
+
+#mac_compare {
+	color: white;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: 485px;
+	margin: 0 auto;
+	width: 90%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+#mac_compare img {
+	margin-top: 35px;
+	width: 750px;
+}
+
+#mac_trust {
+	color: white;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: 150px;
+	margin: 0 auto;
+	width: 90%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+
+/* Shipping Tag */
+#shipping {
+	color: black;
+	font-size: 20px;
+	line-height: 35px;
+	text-align: center;
+	height: 150px;
+	margin: 5px auto;
+	width: 90%;
+	padding: 75px 0;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+#shipping-dark {
+	color: #D3D3D3;
+	font-size: 20px;
+	line-height: 35px;
+	text-align: center;
+	height: 200px;
+	margin: 10px auto;
+	width: 90%;
+	padding: 75px 0;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+#shipping img, #shipping-dark img {
+	width:40px;
+}
+
+/* Apple TV Page */
+#tv_main {
+	color: white;
+	height: auto;
+	margin: 0 auto;
+	width: 60%;
+	padding: 125px 0;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+}
+.productImageTV {
+	width: 80%;
+}
+#tvbox_img {
+	width: 550px;
+}
+#tvapp_img {
+	width: 650px;
+}
+#tvacces_img {
+	width: 600px;
+}
+
+/* CSS Grid Properties (Flex Grid) + Footer */
+.flex-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 7px;
+}
+.half-col {
+	width: 49%;
+	height: 475px;
+	text-align: center;
+	margin: 5px;
+	overflow: hidden;
+}
+.flex-grid > .half-col .HomeProductLabel {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 40px;
+}
+.flex-grid > .half-col .HomeProductCaption {
+	font-family: SFpro_text_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	margin-top: 5px;
+	font-size: 21px;
+}
+footer {
+	font-size: 11px;
+	padding: 15px 0;
+	width: 100%;
+	color: #9A9A9A;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	background-color: #F2F2F2;
+}
+#tv_footer {
+	background-color: #222222;
+}
+.footer_area {
+	margin: 0 auto;
+	width: 65%;
+	padding-bottom: 25px;
+}
+.footer_area > .flex-grid .col {
+	width: 19%;
+	font-size: 11px;
+	height: 275px;
+	text-align: left;
+	margin: 5px 2px;
+	color: #686868;
+	font-family: SFpro_text_regular, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.footer_area > .flex-grid .col .title {
+	color: #4A4A4A;
+	font-family: SFpro_text_semi, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.footer_area > .flex-grid .col .title-dark {
+	color: #848484;
+	font-family: SFpro_text_semi, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.footer_area > .flex-grid .col a, .footer_area > .flex-grid .col a:visited {
+	margin-top: 10px;
+	display: block;
+	color: #686868;
+	text-decoration: none;
+}
+.footer_area > .flex-grid .col a:hover {
+	color: #4a4a4a;
+	text-decoration: underline;
+}
+.footer_area a:link, .footer_area a:visited {
+	color: #2B82CF;
+	text-decoration: none;
+}
+.footer_area a:hover {
+	color: #2B82CF;
+	text-decoration: underline;
+}
+.footer_area hr, .footer_hr {
+	width: 100%;
+	color: #F2F2F2;
+	margin: 17px 0;
+	border: none;
+	border-bottom: 1px solid #D6D6D6;
+}
+.footer_area .copyright {
+	width: 100%;
+	color: #F2F2F2;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 1px solid #D6D6D6;
+}
+.language {
+	float: right;
+}
+#lang_flag {
+	width: 15px;
+	vertical-align: bottom;
+}
+
+/* DESKTOP: CSS Code for Screen Size starting from 801px */
+@media screen and (min-width: 801px) {
+.hideOnDesktop {
+	display: none !important;
+}
+}
+
+/* TABLET: CSS Code for Screen Size up to 1070px */
+@media screen and (max-width: 1070px) {
+.hideOnDesktop {
+	display: none;
+}
+.productImageHome {
+	text-align: center;
+	margin: 20px auto;
+	display: block;
+	width: 80%;
+}
+.nav_item {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.HomeProductLabel {
+	font-size: 45px;
+}
+.HomeProductCaption {
+	font-size: 22px;
+}
+#iPhoneXhome .productImageHome {
+	margin: 50px auto;
+}
+#iPhoneXhome {
+	height: 355px;
+}
+#iPhoneXhome .productImageHome {
+	width: 775px;
+}
+#iPhone8RedHome {
+	height: 500px;
+}
+#iPhone8RedHome .productImageHome {
+	width: 675px;
+}
+#iPadhome {
+	height: 390px;
+}
+#iPadhome .productImageHome {
+	margin: 0 auto;
+	width: 770px;
+	height: auto;
+}
+#macbookpro_home .productImageHome {
+	margin: 0 auto;
+	width: 375px;
+	height: auto;
+}
+#applewatch_home .productImageHome, #wwdc_home .productImageHome {
+	margin: 0 auto;
+	width: 375px;
+	height: auto;
+}
+#airpods_home .productImageHome {
+	margin: 0 auto;
+	width: 275px;
+	height: auto;
+}
+.flex-grid .half-col {
+	width: 48.5%;
+	height: 390px;
+	text-align: center;
+	margin: 5px;
+}
+.flex-grid > .half-col .HomeProductLabel {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 30px;
+}
+.flex-grid > .half-col .HomeProductCaption {
+	font-family: SFpro_text_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	margin-top: 5px;
+	font-size: 18px;
+}
+.footer_area {
+	margin: 0 auto;
+	width: 95%;
+}
+#wwdc_home {
+	background-size: auto 490px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#appletv_home {
+	background-size: auto 490px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#music_home {
+	background-size: auto 490px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#mac_iMacPro {
+	height: 760px;
+	padding: 75px 0;
+}
+#mac_iMacPro img {
+	margin: 0 auto;
+	width: 650px;
+}
+#mac_macbookpro {
+	height: 465px;
+	width: 100%;
+	padding: 75px 0;
+	overflow: hidden;
+}
+#mac_macbookpro img {
+	margin-top: 25px;
+	width: 800px;
+}
+#mac_macbook {
+	height: 485px;
+	width: 100%;
+	padding: 75px 0;
+}
+#mac_macbook img {
+	margin-top: 55px;
+	width: 650px;
+}
+#mac_compare {
+	height: 425px;
+	margin: 0 auto;
+	width: 90%;
+	padding: 45px 0;
+}
+#mac_compare > img {
+	margin-top: 35px;
+	width: 550px;
+}
+#construction {
+	margin: 0 auto;
+	padding: 25px 0;
+	height: 700px;
+}
+#construction > .flex-grid {
+	width: 550px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#subnav > .flex-grid {
+	width: 98%;
+	margin: 5px auto;
+	padding: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+#tvsubmenu > .flex-grid {
+	width: 70%;
+}
+#macsubmenu > .flex-grid {
+	width: 90%;
+}
+#tv_main {
+	max-width: 80%;
+}
+#tvbox_img {
+	width: 500px;
+}
+#tvapp_img {
+	width: 500px;
+}
+#tvacces_img {
+	width: 500px;
+}
+#shipping-dark .half-col, #shipping .half-col {
+	width: 45%;
+}
+}
+
+/* MOBILE: CSS Code for Screen Size up to 800px */
+@media screen and (max-width: 800px) {
+.hideOnMobile {
+	display: none;
+}
+.hideOnDesktop {
+	display: block;
+}
+nav > a > .nav_desktop {
+	display: none;
+}
+.HomeProductLabel {
+	font-size: 30px;
+}
+.HomeProductCaption {
+	font-size: 18px;
+}
+.ItemProductLabel_dark {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 40px;
+}
+.ItemProductCaption_dark {
+	font-family: SFpro_display_regular, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 30px;
+}
+.ItemProductLinks {
+	font-family: SFpro_display_regular, SFpro_display_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #67BBFF;
+	font-size: 17px;
+	margin-top: 15px;
+}
+.ItemProductLabel_light {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black;
+	font-size: 32px;
+}
+.ItemProductCaption_light {
+	font-family: SFpro_display_medium, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black;
+	font-size: 30px;
+}	
+.ItemProductDescription {
+		font-size: 20px;
+	}
+#iPhoneXhome {
+	padding: 90px 0;
+	height: 370px;
+}
+#iPhoneXhome .productImageHome {
+	padding: 0;
+	margin: 30px auto;
+	width: 230px;
+}
+#iPhone8RedHome {
+	padding: 40px 0;
+	height: 420px;
+}
+#iPhone8RedHome .productImageHome {
+	width: 520px;
+}
+.productRedBrackets {
+	vertical-align: sub;
+	font-size: 45px !important;
+}
+.productRedRED {
+	font-size: 20px;
+	font-weight: 200;
+}
+.specialTag {
+	font-family: SFpro_text_light, SFpro_text_light, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	padding: 3px 15px;
+	font-size: 13px;
+}
+#iPhone8RedHome > h2 > a {
+	font-size: 18px;
+}
+#iPadhome {
+	padding: 35px 0;
+	height: 440px;
+}
+#iPadhome .productImageHome {
+	margin: 0 auto;
+	width: 330px;
+}
+.flex-grid > .half-col {
+	width: 98%;
+	height: 390px;
+	text-align: center;
+	margin: 5px;
+}
+.footer_area > .flex-grid > .col {
+	width: 100%;
+	height: auto;
+}
+.footer_area > div > hr {
+	color: #2E2E2E;
+	margin: 12px 0;
+}
+.footer_area > .flex-grid > .col > a {
+	display: none;
+}
+.footer_area > .flex-grid > .col:hover > a {
+	display: block;
+}
+.language {
+	float: left;
+}
+#mac_iMacPro {
+	background-color: #1A1A1A;
+	padding: 50px 0;
+	height: 530px;
+	overflow: hidden;
+}
+#mac_iMacPro > img {
+	margin: 0 auto;
+	width: 450px;
+}
+#mac_macbookpro {
+	height: 300px;
+	padding: 20px 0;
+	overflow: hidden;
+}
+#mac_macbookpro > img {
+	margin-top: 50px;
+	width: 450px;
+}
+#mac_macbook {
+	height: 270px;
+	padding: 45px 0;
+	overflow: hidden;
+}
+#mac_macbook > img {
+	margin-top: 50px;
+	width: 300px;
+}
+.thickWhiteLine_product {
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	border: none;
+}
+#mac_macOS {
+	color: white;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	height: 140px;
+	width: 100%;
+	padding: 120px 0;
+}
+#mac_macOS > .ItemProductLinks > a, #mac_macOS > .ItemProductLinks > a:visited, #mac_macOS > .ItemProductLinks > a:hover {
+	color: white;
+}
+#mac_macOS > .ItemProductCaption_dark {
+	font-size: 25px;
+}
+#mac_compare {
+	text-align: center;
+	height: 235px;
+	padding: 75px 0;
+}
+#mac_compare > img {
+	margin-top: 25px;
+	width: 250px;
+}
+#mac_trust {
+	height: 275px;
+	padding: 45px 20px;
+	width: 83%;
+}
+#construction {
+	margin: 0 auto;
+	padding: 25px 0;
+	height: 700px;
+}
+#construction > .flex-grid {
+	width: 350px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#tvsubmenu > .flex-grid {
+	width: 95%;
+}
+#tv_main {
+	width: 95%;
+}
+#tvbox_img {
+	width: 300px;
+}
+#tvapp_img {
+	width: 350px;
+}
+#tvacces_img {
+	width: 300px;
+}
+.ItemProductCaption_dark_large {
+	font-size: 30px;
+}
+.ItemProductDescription_dark {
+	font-family: SFpro_text_light, SFpro_display_regular, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 20px;
+	line-height: 30px;
+}
+#shipping-dark .half-col, #shipping .half-col {
+	width: 45%;
+		line-height: 25px;
+		height: 450px !important;
+}
+}

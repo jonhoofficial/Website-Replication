@@ -1,0 +1,758 @@
+/*==== Fonts */
+ @font-face {
+     font-family: Roboto;
+     src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+ @font-face {
+     font-family: RobotoLight;
+     src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+ @font-face {
+     font-family: RobotoThin;
+     src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+ @font-face {
+     font-family: Segoe;
+     src: url(../fonts/Segoe/SegoeUI.ttf);
+}
+
+/*==== CSS Document */
+ body {
+     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+ a, a:visited, a:hover, a:active, a:focus {
+     color: #0366d6;
+}
+ .grey-bg {
+     background-color: #f1f1f1 !important;
+}
+ .bg-dark-grey {
+     background-color: #24292e !important;
+}
+ .tiny {
+     width: 50px;
+}
+ .short {
+     width: 200px;
+}
+ .blank {
+     border: none;
+     height: 10px;
+}
+ .sm-blank {
+     border: none;
+     height: 5px;
+}
+ .sm-text {
+     font-size: 16px !important;
+     font-weight: 400 !important;
+}
+ .arrow {
+     text-align: right;
+     color: #2429e;
+     vertical-align: text-bottom;
+     font-size: 12px !important;
+}
+ .txt-blue {
+     color: #0366d6;
+}
+ .purple-btn {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #643ab0;
+     background-image: linear-gradient(-180deg, #7e55c7 0%, #643ab0 90%);
+     border: none;
+}
+ .purple-btn:active {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #613ca4;
+     background-image: none;
+}
+ .purple-btn:hover {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #5f37a8;
+     background-image: linear-gradient(-180deg, #784ec5 0%, #5f37a8 90%);
+}
+ .blue-btn {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #3b41af;
+     background-image: linear-gradient(-180deg, #6570e2 0%, #3b41af 90%);
+     border: none;
+}
+ .blue-btn:active {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #3a43bb;
+     background-image: none;
+}
+ .blue-btn:hover {
+     color: white !important;
+     text-decoration: none !important;
+     background-color: #383ea7;
+     background-image: linear-gradient(-180deg, #5c68e0 0%, #383ea7 90%);
+}
+
+/* Bootstrap */
+ .card {
+     color: dimgrey !important;
+     padding: 30px;
+     font-size: 14px !important;
+}
+
+/* Navbar */
+ .nav-item {
+     border-top: none !important;
+}
+ #brandicon {
+     width: 30px;
+}
+ .github_logo {
+     max-width: 70px;
+     width: 100%;
+}
+ .navbar-brand {
+     font-size: 16px;
+     color: #586069 !important;
+}
+ a.navbar-brand:hover {
+     color: #0366d6 !important;
+}
+/* = MAIN NAV */
+ #mainnav {
+     min-height: 70px;
+	 font-size: 16px;
+} 
+ #mainnav a, #mainnav:visited, #mainnav:active, #mainnav:focus {
+	 font-size: 16px;
+     color: white !important;
+     padding-right: 0.5rem;
+	 padding-left: 0.5rem;
+}
+ #mainnav a:hover {
+	 font-size: 16px;
+     color: rgba(255, 255, 255, 0.75) !important;
+	 padding-right: 0.5rem;
+	 padding-left: 0.5rem;
+}
+ #mainnav .active {
+     border-bottom: 2px solid #D1D1D1 !important;
+}
+ .searchbar {
+     background-color: rgba(255, 255, 255, 0.125);
+     border-radius: 2px !important;
+     height: 30px !important;
+     border: none;
+     font-size: 13px !important;
+     width: 200px !important;
+}
+/* = SECONDARY NAV */
+ .form-inline > * {
+     margin: 0 5px;
+}
+ #featuresbar {
+     height: 70px;
+     background: white;
+     vertical-align: text-bottom !important;
+     text-align: center;
+     border-bottom: 1px solid #E0E0E0;
+     color: #24292e !important;
+}
+ #featuresbar a {
+     margin: 0 17px;
+     padding-top: 22px;
+     padding-bottom: 20px;
+}
+ #featuresbar a:visited, .navbar-light .navbar-nav .nav-link.active {
+     color: black;
+     border-bottom: 3px solid black;
+}
+ #featuresbar a:hover {
+     color: black !important;
+}
+ #featuresbar a:active {
+     color: #959595;
+}
+ #featuresbar a:focus {
+     color: #959595;
+}
+ #businessbar {
+     height: 70px;
+     background: white;
+     vertical-align: text-bottom !important;
+     text-align: left;
+     border-bottom: 1px solid #E0E0E0;
+     color: #24292e !important;
+}
+ #businessbar a {
+     margin: 0 5px;
+     color: #6f42c1;
+}
+ #businessbar a:hover {
+     color: #3a1d6e;
+}
+ #businessbar a:active {
+     color: #959595;
+}
+ #businessbar a:focus {
+     color: #959595;
+}
+ #businessbar .nav-item .border {
+     border-radius: 7px;
+}
+
+/* Section/Content Headings */
+ .section-title {
+     font-size: 54px;
+     font-weight: 300;
+     color: black;
+}
+ .section-subtitle {
+     font-size: 20px;
+     color: #586069;
+     font-weight: 300;
+     margin: 20px auto;
+     width: 90%;
+     max-width: 610px;
+}
+ .featurebox {
+     padding: 15px 5px;
+     margin: 0 5px;
+     border-radius: 3px;
+     transition: box-shadow 0.3s, border 0.3s 
+}
+ .featurebox-title {
+     font-size: 22px;
+     font-weight: 400;
+     text-align: left;
+     margin-bottom: 4px !important;
+     color: #24292e !important;
+}
+ .featurebox-description {
+     color: #24292e;
+     text-align: left;
+     font-size: 14px !important;
+}
+ .featurebox-sm-title {
+     font-size: 16px;
+     font-weight: 400;
+     text-align: left;
+     margin-bottom: 4px !important;
+     color: #24292e !important;
+}
+ .featurebox-sm-description {
+     color: #586069;
+     text-align: left;
+     font-size: 14px !important;
+}
+ .highlight-box {
+     border-radius: 2px;
+     border: 1px solid #C9C9C9;
+     text-align: left !important;
+     color: #24292e;
+     margin: 25px auto;
+     padding: 25px;
+     display: inline-block;
+     font-size: 14px !important;
+}
+ .large-white-text {
+     font-size: 38px !important;
+     font-weight: 200 !important;
+     padding: 0 7%;
+     line-height: 50px;
+     font-family: RobotoLight, Roboto, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Links and Buttons */
+ .standard-btn {
+     border-radius: 6px !important;
+     color: #0366d6;
+}
+ .standard-btn:hover, .standard-btn:active {
+     color: #ffffff;
+     background-color: #0366d6;
+     border-color: #0366d6 
+}
+
+/* Jumbotron CSS */
+ .jumbotron_home {
+     background-color: #2b3137;
+     background-image: url(../images/codelines.svg);
+     background-repeat: none;
+     background-size: cover;
+     color: white;
+     padding: 130px auto;
+     margin: 0 !important;
+     text-align: left !important;
+}
+ .jumbotron_home a, .jumbotron_home a:visited, .jumbotron_home a:active, .jumbotron_home a:focus {
+     font-weight: 400;
+     color: #ffffff;
+     text-decoration: none;
+     border-bottom: 1px solid #434343 !important;
+}
+ .jumbotron_home a:hover {
+     font-weight: 400;
+     color: #ffffff;
+     text-decoration: none;
+     border-bottom: 1px solid #C7C7C7 !important;
+}
+ .jumbotron {
+     margin: 0;
+     border-radius: 0;
+}
+ .jumbotron h1 {
+     line-height: 70px;
+     letter-spacing: 2px;
+     padding-top: 25px;
+     font-family: RobotoLight, Roboto, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+     font-weight: 300 !important;
+}
+ .subpage_head {
+     font-size: 54px !important;
+}
+ .jumbotron_home h4 {
+     font-weight: 100 !important;
+     color: #aaaaaa;
+     line-height: 35px;
+     font-size: 25px;
+     font-family: RobotoLight, Roboto, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+     width: 92%;
+}
+ .subpage_subhead {
+     color: white !important;
+     font-family: RobotoThin, Roboto, Segoe, "Segoe UI", Helvetica, Arial, sans-serif !important;
+     font-size: 26px !important;
+     width: 80% !important;
+}
+
+/* Page Not Found Page CSS */
+ .pagenotfound {
+     margin: 25px auto 40px auto;
+}
+ .pagenotfoundlinks {
+     margin: 15px auto 40px auto;
+     color: #cccccc;
+     font-size: 13px;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ .pagenotfoundlinks a {
+     margin: 15px auto 40px auto;
+     color: #666666;
+     font-size: 14px;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ .search_pagenotfound {
+     width: 85% !important;
+}
+ #githubicon_pagenotfound {
+     width: 32px;
+     height: 32px;
+}
+ .pagenotfoundhead img {
+     height: 100%;
+     width: 100%;
+}
+ .searchlabel {
+     padding: 5px 0;
+     font-weight: 200;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 15px;
+}
+
+/* Home Page CSS */
+ .thankyou {
+     padding: 25px 20px;
+}
+ .thankyou p {
+     vertical-align: center !important;
+}
+ #business-intro-title {
+     font-size: 18px;
+     font-weight: 400;
+     font-family: Roboto, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+ .business_list {
+     text-align: center !important;
+     float: center;
+     padding: 55px 0;
+     font-size: 22px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+ .githubteams {
+     text-align: center !important;
+     float: center;
+     padding: 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+ .githubteams .featurebox:hover {
+     border: 1px solid #C9C9C9;
+     box-shadow: 0 0 3px 3px #E6E6E6;
+     text-decoration: none !important;
+}
+ .githubteams a:any-link {
+     text-decoration: none !important;
+}
+ .securityadmin {
+     text-align: center !important;
+     float: center;
+     padding: 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+ .integration {
+     text-align: center !important;
+     float: center;
+     padding: 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+ .jointoday {
+     text-align: center !important;
+     float: center;
+     padding: 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+
+/* Images Formatting */
+ .sm-logo-bw {
+     height: 25px;
+     margin: 15px 0;
+     -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+     filter: grayscale(100%);
+}
+ .sm-logo-cl {
+     height: 25px;
+     margin: 15px 0;
+     -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+     filter: grayscale(0%);
+}
+ #robotImage {
+     width: 90%;
+}
+ .side_img {
+     width: 100%;
+}
+
+/* Sign Up Form */
+ .form-text {
+     font-size: 12px;
+     width: 75%;
+}
+ .signup-btn {
+     border-radius: 7px;
+     font-size: 15px;
+     padding: 10px;
+}
+ .bigger-form-box {
+     height: 50px !important;
+}
+
+/* Icons and Logo Formatting */
+ .icon {
+     width: 60px;
+     height: auto;
+     margin: 0 auto;
+     text-align: center;
+}
+ .integration_icon {
+     width: 85px !important;
+     height: auto;
+     margin: 40px 20px;
+}
+ #slackICON {
+     background-color: #553958 !important;
+     padding: 20px;
+}
+ #zenhubICON {
+     background-color: #364e98 !important;
+     padding: 20px;
+}
+ #travisICON {
+     background-color: #eff9f9 !important;
+     padding: 20px;
+}
+ #atomICON {
+     background-color: #5fb57d !important;
+     padding: 20px;
+}
+ #circleICON {
+     background-color: #022531 !important;
+     padding: 20px;
+}
+ #codeshipICON {
+     background-color: #f3f6fb !important;
+     padding: 20px;
+}
+ #codeclimateICON {
+     background-color: #303030 !important;
+     padding: 20px;
+}
+ #appveyorICON {
+     background-color: #20aaea !important;
+     padding: 20px;
+}
+ #codacyICON {
+     background-color: white !important;
+     padding: 20px;
+     border: 1px solid #eeeeee;
+}
+
+/* Footer */
+ footer {
+     padding: 0 15px;
+     background-color: white !important;
+}
+ footer .sm-text {
+     color: #586069 !important;
+     font-size: 14px !important;
+}
+ footer a, footer a:visited, footer a:active, footer a:focus {
+     color: #586069;
+     font-size: 14px;
+     text-decoration: none;
+}
+ footer a:hover {
+     color: #0366d6 !important;
+     text-decoration: none;
+}
+ footer .link-head {
+     font-size: 16px;
+     font-weight: 600;
+     margin-bottom: 8px !important;
+}
+
+/* Other Pages */
+ #play-btn-sm {
+     width: 30px;
+     height: 30px;
+}
+ .play-vid a:any-link {
+     text-decoration: none !important;
+     border: none !important;
+     color: white;
+}
+ .feature_img {
+     width: 90% !important;
+}
+ .features_section, .business_section {
+     text-align: center !important;
+     float: center;
+     padding: 80px 15px 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+}
+ .business_hosting {
+     text-align: left !important;
+     padding: 55px 15px;
+     color: #6a737d;
+     font-weight: light !important;
+     background-color: #fafbfc;
+}
+ .business_hosting .section-title {
+     font-size: 38px !important;
+     font-weight: 300 !important;
+}
+ .business_hosting .section-subtitle {
+     font-size: 20px !important;
+     font-weight: 300 !important;
+     color: #586069;
+     margin: 0 !important;
+}
+ .business_hosting .card-title {
+     color: #6f42c1 !important;
+     font-size: 22px;
+}
+ .business_hosting .card-title .badge {
+     color: #6f42c1 !important;
+     background-color: #f5f0ff !important;
+}
+
+ 
+@media (max-width: 576px) {
+     .container {
+         max-width: 540px;
+    }
+     .hide-mobile {
+         display: none;
+    }
+     .integration_icon {
+         width: 95px !important;
+         height: auto;
+         margin: 15px 10px;
+    }
+     .center-on-mobile {
+         text-align: center !important;
+    }
+     .sm-logo-bw {
+         height: 20px;
+         margin: 0;
+         -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+         filter: grayscale(100%);
+    }
+     .sm-logo-cl {
+         height: 20px;
+         margin: 0;
+         -webkit-filter: grayscale(0%);
+        /* Safari 6.0 - 9.0 */
+         filter: grayscale(0%);
+    }
+     .section-title {
+         font-size: 34px !important;
+         font-weight: 300;
+         color: black;
+    }
+     .large-white-text {
+         font-size: 25px;
+         font-weight: 200;
+         padding: 0;
+         line-height: 40px;
+    }
+     .featurebox-title {
+         font-size: 18px;
+         font-weight: 400;
+    }
+     .nav-item {
+         border-top: 1px solid #444d56 !important;
+         padding-top: 5px !important;
+         padding-bottom: 5px !important;
+    }
+     .searchbar {
+         width: 100% !important;
+         height: 45px;
+    }
+     #featuresbar {
+         display: none;
+    }
+}
+
+ @media (max-width: 767px) {
+     .container {
+         max-width: 540px;
+    }
+     .hide-mobile {
+         display: none !important;
+    }
+     .hide-desktop {
+         display: block !important;
+    }
+     .githubteams .featurebox:hover {
+         border: none;
+         box-shadow: none;
+         text-decoration: none !important;
+    }
+     .integration_icon {
+         width: 95px !important;
+         height: auto;
+         margin: 15px 10px;
+    }
+     .center-on-mobile {
+         text-align: center !important;
+    }
+     .section-title {
+         font-size: 34px !important;
+         font-weight: 300;
+         color: black;
+    }
+     .signup-btn {
+         width: auto !important;
+         text-align: center;
+         margin: 0 auto;
+         padding: 10px 20px !important;
+    }
+     .large-white-text {
+         font-size: 28px !important;
+         font-weight: thin !important;
+         padding: 0 2%;
+         line-height: 40px;
+    }
+     .featurebox-title {
+         font-size: 18px;
+         font-weight: 400;
+    }
+     .nav-item {
+         border-top: 1px solid #444d56;
+         padding-top: 5px !important;
+         padding-bottom: 5px !important;
+    }
+     #featuresbar {
+         display: none;
+    }
+     #businessbar .navbar-nav {
+         display: none !important;
+    }
+     .jumbotron h1 {
+         font-size: 45px;
+         text-align: center;
+         line-height: 45px;
+    }
+     .jumbotron h4 {
+         font-size: 21px;
+         text-align: center;
+         line-height: 30px;
+    }
+     .active {
+         border-bottom: none !important;
+    }
+}
+
+ @media (max-width: 991px) {
+     .container {
+         max-width: 720px;
+    }
+     .hide-desktop {
+         display: none;
+    }
+     .hide-mobile {
+         display: block;
+    }
+     #10years {
+         text-align: right;
+    }
+     .section-title {
+         font-size: 54px;
+         font-weight: 300;
+         color: black;
+    }
+     #featuresbar {
+         display: none;
+    }
+}
+
+ @media (max-width: 1199px) {
+     .container {
+         max-width: 960px;
+    }
+     .hide-desktop {
+         display: none;
+    }
+     .hide-mobile {
+         display: block;
+    }
+     #featuresbar a {
+         margin: 0 4px;
+         padding-top: 22px;
+         padding-bottom: 20px;
+    }
+}
+
+ @media (min-width: 1200px) {
+     .container {
+         max-width: 1020px !important;
+    }
+     .hide-desktop {
+         display: none;
+    }
+     .hide-mobile {
+         display: block;
+    }
+}
+ 
