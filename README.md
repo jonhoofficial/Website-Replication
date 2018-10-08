@@ -6,9 +6,11 @@ of any existing website. The 1st assignment only permitted students to use HTML 
 ## Breakdown
 1st Assignment: Apple Website using HTML5 and CSS3\
 Completed Pages: Home Page, Macs, Apple TV, Coming Soon/Construction Page
+(Click Here to view the completed website - Coming Soon)
 
 2nd Assignment: GitHub Website using HTML5 and CSS3 along with Bootstrap and Javascript\
 Completed Pages: Home Page, Business, Features, Error 404 Page
+(Click Here to view the completed website - Coming Soon)
 
 ## Disclaimer
 All images and fonts used in these assignments belong to their respective users/businesses.\
